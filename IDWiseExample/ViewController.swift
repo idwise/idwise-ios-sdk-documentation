@@ -10,15 +10,11 @@ import IDWise
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     
-    override func viewDidAppear(_ animated: Bool) {
+    @IBAction func startSDK(_ sender: UIButton) {
         IDWiseSDK.start(customerID: YOUR_CUSTOMER_ID, delegate: self)
     }
+
 
 }
 
