@@ -19,6 +19,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController:IDWiseSDKDelegate {
+    func JourneyCanceled() {
+        
+    }
+    
     func JourneyStarted(journeyID: String) {
         
     }
@@ -27,9 +31,7 @@ extension ViewController:IDWiseSDKDelegate {
         
     }
     
-    func JourneyCanceld() {
-        
-    }
+   
     
     
 
