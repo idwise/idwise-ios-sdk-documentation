@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func startSDK(_ sender: UIButton) {
-        IDWise.start(journeyDefinitionId: "YOUR_CUSTOMER_ID", delegate: self)
+        IDWise.start(journeyDefinitionId: "YOUR_CUSTOMER_ID", referenceNumber: "YOUR_REFERENCE_NO", locale: "en", delegate: self)
     }
 
 
