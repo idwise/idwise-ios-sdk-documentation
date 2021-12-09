@@ -50,28 +50,28 @@ IDWise SDK is designed to start on top of a UIViewController in your application
 To start a new journey just provide the UIViewController from which you want the flow to start then call `IDWiseSDK.start` method:
 
 ```swift
-IDWiseSDK.start(customerID: '<YOUR_CUSTOMER_ID>', delegate: self)
+IDWise.start(journeyDefinitionId: '<YOUR_CUSTOMER_ID>', delegate: self)
 ``` 
 
 This will make IDWise SDK show a UI with a wizard to guide the user through completing the onboarding journey
 
 This method takes two parameters:
-- `customerID`: This is an identifier that distinguishes your business and will be provided to you as part of registering with IDWise service
+- `journeyDefinitionId`: This is an identifier that distinguishes your business and will be provided to you as part of registering with IDWise service
 - `delegate`: This parameter is used to provide a set of event handlers to handle the different events that are triggered from IDWise SDK. These events indicate the lifetime of a journey and provide oppurtunity for your application to react to certain events.
 
 For example we can implement the protocol as an extension on the ViewController like so:
 
 ```swift
 extension ViewController:IDWiseSDKDelegate {
+    func JourneyCancelled() {
+        
+    }
+    
     func JourneyStarted(journeyID: String) {
         
     }
     
     func JourneyFinished() {
-        
-    }
-    
-    func JourneyCanceld() {
         
     }
 }

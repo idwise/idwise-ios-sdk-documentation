@@ -7,6 +7,6 @@ target 'IDWiseExample' do
   use_frameworks!
 
   # Pods for IDWiseExample
-  pod 'IDWise', '2.0.1'
+  pod 'IDWise', '2.2.1'
 
 end

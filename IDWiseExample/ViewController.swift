@@ -12,14 +12,15 @@ class ViewController: UIViewController {
 
     
     @IBAction func startSDK(_ sender: UIButton) {
-        IDWiseSDK.start(customerID: YOUR_CUSTOMER_ID, delegate: self)
+        IDWise.start(journeyDefinitionId: "YOUR_CUSTOMER_ID", delegate: self)
     }
 
 
 }
 
 extension ViewController:IDWiseSDKDelegate {
-    func JourneyCanceled() {
+    
+    func JourneyCancelled() {
         
     }
     
@@ -30,9 +31,5 @@ extension ViewController:IDWiseSDKDelegate {
     func JourneyFinished() {
         
     }
-    
-   
-    
-    
 
 }
