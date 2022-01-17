@@ -12,13 +12,25 @@ class ViewController: UIViewController {
 
     
     @IBAction func startSDK(_ sender: UIButton) {
-        IDWise.start(journeyDefinitionId: "YOUR_CUSTOMER_ID", referenceNumber: "YOUR_REFERENCE_NO", locale: "en", delegate: self)
+        IDWise.initialize(apiKey: "YOUR_API_KEY", apiSecret: "YOUR_API_SECRET") { isSucceeded, error in
+            if isSucceeded && error == nil {
+                IDWise.startJourney(journeyDefinitionId: "YOUR_CUSTOMER_ID", referenceNumber: "YOUR_REFERENCE_NO", locale: "en", delegate: self)
+            }
+            else {
+                // Deal with error here
+                print(isSucceeded ,error?.code , error?.message)
+            }
+        }
     }
 
 
 }
 
 extension ViewController:IDWiseSDKDelegate {
+    func onError(errorMessage: IDWiseSDKError) {
+        print(errorMessage.code , errorMessage.message)
+    }
+    
     
     func JourneyCancelled() {
         
