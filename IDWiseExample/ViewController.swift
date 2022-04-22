@@ -9,29 +9,43 @@ import UIKit
 import IDWise
 
 class ViewController: UIViewController {
+   
 
     
     @IBAction func startSDK(_ sender: UIButton) {
         
-        IDWise.initialize(clientKey: "<YOUR_CLIENT_KEY>") { error in
+        IDWise.initialize(clientKey: "<YOUR_CLIENT_KEY>") { err in
                 // Deal with error here
-                print(error?.code , error?.message)
+            if let error = err {
+                self.showCustomAlert(title: "Error \(error.code)", message: error.message)
+            }
         }
         
-        IDWise.startJourney(journeyDefinitionId: "YOUR_CUSTOMER_ID", referenceNumber: "YOUR_REFERENCE_NO", locale: "en", delegate: self)
-        
-        
-        
+        IDWise.startJourney(journeyDefinitionId: "<YOUR_DEFINITION_JOURNEY_ID>",  locale: "en", journeyDelegate: self)
+
+    }
+    
+    // MARK: - UI Handling Methods
+    private func showCustomAlert(title: String = "Custom Alert" , message: String) {
+        // Showing an Alert when a step completes
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+           
+        }
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
     }
 
 
 }
 
-extension ViewController:IDWiseSDKDelegate {
+extension ViewController:IDWiseSDKJourneyDelegate {
     func onError(error: IDWiseSDKError) {
-        print(error.code , error.message)
+        self.showCustomAlert(title: "Error \(error.code)", message: error.message)
     }
-    
+    func onJourneyResumed(journeyID: String) {
+        
+    }
     
     func JourneyCancelled() {
         
