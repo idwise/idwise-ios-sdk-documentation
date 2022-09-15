@@ -1,7 +1,7 @@
 PODS:
-  - GoogleDataTransport (9.1.2):
-    - GoogleUtilities/Environment (~> 7.2)
-    - nanopb (~> 2.30908.0)
+  - GoogleDataTransport (9.2.0):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
   - GoogleMLKit/ImageLabelingCustom (2.6.0):
     - GoogleMLKit/MLKitCore
@@ -26,16 +26,16 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.3.2)
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.2)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.3.2)"
-  - GoogleUtilities/Environment (7.7.0):
+  - GoogleUtilities/Environment (7.8.0):
     - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleUtilities/Logger (7.7.0):
+  - GoogleUtilities/Logger (7.8.0):
     - GoogleUtilities/Environment
-  - GoogleUtilities/UserDefaults (7.7.0):
+  - GoogleUtilities/UserDefaults (7.8.0):
     - GoogleUtilities/Logger
   - GoogleUtilitiesComponents (1.1.0):
     - GoogleUtilities/Logger
-  - GTMSessionFetcher/Core (1.7.1)
-  - IDWise (3.3.1):
+  - GTMSessionFetcher/Core (1.7.2)
+  - IDWise (3.8.0):
     - GoogleMLKit/ImageLabelingCustom (~> 2.6.0)
     - GoogleMLKit/ObjectDetection (~> 2.6.0)
     - GoogleMLKit/TextRecognition (~> 2.6.0)
@@ -84,16 +84,16 @@ PODS:
     - MLKitImageLabelingCommon (~> 3.0)
     - MLKitObjectDetectionCommon (~> 3.0)
     - MLKitVision (~> 3.0)
-  - nanopb (2.30908.0):
-    - nanopb/decode (= 2.30908.0)
-    - nanopb/encode (= 2.30908.0)
-  - nanopb/decode (2.30908.0)
-  - nanopb/encode (2.30908.0)
-  - PromisesObjC (2.1.0)
-  - Protobuf (3.20.1)
+  - nanopb (2.30909.0):
+    - nanopb/decode (= 2.30909.0)
+    - nanopb/encode (= 2.30909.0)
+  - nanopb/decode (2.30909.0)
+  - nanopb/encode (2.30909.0)
+  - PromisesObjC (2.1.1)
+  - Protobuf (3.21.6)
 
 DEPENDENCIES:
-  - IDWise
+  - IDWise (= 3.8.0)
 
 SPEC REPOS:
   https://github.com/idwise/ios-sdk:
@@ -120,13 +120,13 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
-  GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
+  GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
   GoogleMLKit: 755661c46990a85e42278015f26400286d98ad95
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
-  GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
+  GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
   GoogleUtilitiesComponents: 679b2c881db3b615a2777504623df6122dd20afe
-  GTMSessionFetcher: 4577a4cc914a5a07c40a8a0ad0acc22080418c2d
-  IDWise: 8bcd32aaa92eb73e9f96a3ea37fd8ce7ba50eb0f
+  GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
+  IDWise: 2c44b79cf3982d8d62e2fe09f2b2b462697c0a7a
   MLImage: a454f9f8ecfd537783a12f9488f5be1a68820829
   MLKitCommon: 3bc17c6f7d25ce3660f030350b46ae7ec9ebca6e
   MLKitImageLabelingCommon: 9916b03956a3a647ebc7471a12b1eb0798ae84f8
@@ -137,10 +137,10 @@ SPEC CHECKSUMS:
   MLKitTextRecognitionCommon: 3e84602c928fe2b775fae81376f2136324cbd763
   MLKitVision: e87dc3f2e456a6ab32361ebd985e078dd2746143
   MLKitVisionKit: 68c122ceb9b2fe1a05ffe09341c750d566c77170
-  nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
-  PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
-  Protobuf: b60ec2f51ad74765f44d0c09d2e0579d7de21745
+  nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  Protobuf: e7846f61e8542750cf311385fc633c1d00928f9f
 
-PODFILE CHECKSUM: 071f6787284018efc9548063f30f5dcd143e96fa
+PODFILE CHECKSUM: bc0aa3586155ab0d81eb473886f1d0d36a6d333d
 
 COCOAPODS: 1.11.2
