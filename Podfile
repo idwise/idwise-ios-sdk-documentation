@@ -7,6 +7,13 @@ target 'IDWiseExample' do
   use_frameworks!
 
   # Pods for IDWiseExample
-  pod 'IDWise', '3.8.0'
+  pod 'IDWise'
+  
+  post_install do |installer|
+     installer.pods_project.build_configurations.each do |config|
+       config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+       config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+     end
+   end
 
 end

@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     
 
-    @IBOutlet weak var startDynamicJourney: UIButton!
     
     private var currentStep = 0
 
@@ -35,18 +34,7 @@ class ViewController: UIViewController {
         IDWise.startJourney(journeyDefinitionId: "<YOUR_DEFINITION_JOURNEY_ID>",  locale: "en", journeyDelegate: self)
 
     }
-    @IBAction func startDynamicJourney(_ sender: Any) {
-        IDWise.initialize(clientKey: "<YOUR_CLIENT_KEY>") { err in
-                // Deal with error here
-            if let error = err {
-                self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in
-                    
-                })
-            }
-        }
-        
-        IDWise.startDynamicJourney(journeyDefinitionId: "<YOUR_DEFINITION_JOURNEY_ID>",locale: "en", journeyDelegate: self, stepDelegate: self)
-    }
+   
     
     // MARK: - UI Handling Methods
     private func showCustomAlert(title: String = "Custom Alert" , message: String, handler: @escaping ((UIAlertAction)->Void)) {
@@ -60,42 +48,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: IDWiseSDKStepDelegate {
-    func onStepConfirmed(stepId: String) {
-        LoadingView.hide()
-        print("Step Confirmed")
-    }
-    
-    // Handling UI on each step capture and completion
-    func onStepResult(stepId: Int,stepResult: StepResult?) {
-        LoadingView.hide()
-        // Showing Custom Alert using Step Result Information
-        if let reasonCode = stepResult?.failureReasonCode {
-            self.showCustomAlert(title: (stepResult!.document?.documentType) ?? "Selfie",message: "This verification step is completed with \(reasonCode)", handler: { _ in
-                LoadingView.show()
-                IDWise.confirmStep(stepId: String(self.currentStep))
-                
-            })
-        } else {
-            self.showCustomAlert(title: (stepResult!.document?.documentType) ?? "Selfie",message: "This verification step is completed!", handler: { _ in
-                LoadingView.show()
-                IDWise.confirmStep(stepId: String(self.currentStep))
-                
-            })
-        }
-      
-        
-    }
-    
-    func onStepCaptured(stepId: Int, capturedImage: UIImage?) {
-        // Handling UI
-        LoadingView.show()
-        // Show Loading Indicator or show captured Image on screen
-       
-       
 
-    }
-}
 extension ViewController:IDWiseSDKJourneyDelegate {
     func onError(error: IDWiseSDKError) {
         self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in
