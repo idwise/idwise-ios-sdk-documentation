@@ -10,10 +10,12 @@ import ExampleModule
 
 class ViewController: UIViewController {
     
+    let exampleObj = ExampleType()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ExampleType.initialiseIDWiseSDK()
+        exampleObj.initialiseIDWiseSDKAndStartJourney()
     }
 }
 

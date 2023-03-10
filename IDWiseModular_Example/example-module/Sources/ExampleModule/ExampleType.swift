@@ -10,7 +10,42 @@ import IDWise
 
 public class ExampleType {
     
-    public static func initialiseIDWiseSDK() {
-        IDWise.initialize(clientKey: "CLIENT_KEY", onError: { _ in })
+    let CLIENT_KEY = "<CLIENT_KEY>"
+    let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
+    
+    public init() {}
+    
+    public func initialiseIDWiseSDKAndStartJourney() {
+        IDWise.initialize(clientKey: CLIENT_KEY) { err in
+            // Deal with error here
+            if let error = err {
+            }
+        }
+        
+        IDWise.startJourney(journeyDefinitionId: JOURNEY_DEFINITION_ID,  locale: "en", journeyDelegate: self)
     }
+}
+
+extension ExampleType: IDWiseSDKJourneyDelegate {
+    
+    public func onError(error: IDWiseSDKError) {
+        
+    }
+    
+    public func onJourneyResumed(journeyID: String) {
+        
+    }
+    
+    public func JourneyCancelled() {
+        
+    }
+    
+    public func JourneyStarted(journeyID: String) {
+        
+    }
+    
+    public func JourneyFinished() {
+        
+    }
+
 }
