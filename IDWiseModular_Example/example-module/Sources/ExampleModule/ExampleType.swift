@@ -8,14 +8,12 @@
 import Foundation
 import IDWise
 
-public class ExampleType {
+class ExampleType {
     
     let CLIENT_KEY = "<CLIENT_KEY>"
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
     
-    public init() {}
-    
-    public func initialiseIDWiseSDKAndStartJourney() {
+    func initialiseIDWiseSDKAndStartJourney() {
         IDWise.initialize(clientKey: CLIENT_KEY) { err in
             // Deal with error here
             if let error = err {
@@ -28,23 +26,23 @@ public class ExampleType {
 
 extension ExampleType: IDWiseSDKJourneyDelegate {
     
-    public func onError(error: IDWiseSDKError) {
+    func onError(error: IDWiseSDKError) {
         
     }
     
-    public func onJourneyResumed(journeyID: String) {
+    func onJourneyResumed(journeyID: String) {
         
     }
     
-    public func JourneyCancelled() {
+    func JourneyCancelled() {
         
     }
     
-    public func JourneyStarted(journeyID: String) {
+    func JourneyStarted(journeyID: String) {
         
     }
     
-    public func JourneyFinished() {
+    func JourneyFinished() {
         
     }
 
