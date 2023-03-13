@@ -10,8 +10,12 @@ import IDWise
 
 class ViewController: UIViewController {
     
+    // TODO: Replace the placeholder with your 'Client Key' provided by IDWise
     let CLIENT_KEY = "<CLIENT_KEY>"
+    
+    // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

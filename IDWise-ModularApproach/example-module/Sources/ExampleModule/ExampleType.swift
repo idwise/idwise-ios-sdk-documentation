@@ -10,8 +10,12 @@ import IDWise
 
 class ExampleType {
     
+    // TODO: Replace the placeholder with your 'Client Key' provided by IDWise
     let CLIENT_KEY = "<CLIENT_KEY>"
+    
+    // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
+    
     
     func initialiseIDWiseSDKAndStartJourney() {
         IDWise.initialize(clientKey: CLIENT_KEY) { err in
