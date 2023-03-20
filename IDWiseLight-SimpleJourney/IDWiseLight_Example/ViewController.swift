@@ -1,55 +1,54 @@
 //
 //  ViewController.swift
-//  IDWiseExample
+//  IDWiseLight_Example
 //
-//  Created by Hussein Alshlash on 23.08.2021.
+//  Created by Mian Najeeb on 08/03/2023.
 //
 
 import UIKit
-import IDWise
+import IDWiseLight
 
 class ViewController: UIViewController {
-   
-    
-    
 
+    // TODO: Replace the placeholder with your 'Client Key' provided by IDWise
+    let CLIENT_KEY = "<CLIENT_KEY>"
     
-    private var currentStep = 0
-
+    // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
+    let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    @IBAction func startSDK(_ sender: UIButton) {
-        
-        IDWise.initialize(clientKey: "<YOUR_CLIENT_KEY>") { err in
-                // Deal with error here
+    
+    @IBAction
+    func startSDK(_ sender: UIButton) {
+        IDWise.initialize(clientKey: CLIENT_KEY) { err in
+            // Deal with error here
             if let error = err {
                 self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in
-                    
+
                 })
             }
         }
         
-        IDWise.startJourney(journeyDefinitionId: "<YOUR_DEFINITION_JOURNEY_ID>",  locale: "en", journeyDelegate: self)
+        IDWise.startJourney(journeyDefinitionId: JOURNEY_DEFINITION_ID,  locale: "en", journeyDelegate: self)
 
     }
-   
     
-    // MARK: - UI Handling Methods
-    private func showCustomAlert(title: String = "Custom Alert" , message: String, handler: @escaping ((UIAlertAction)->Void)) {
-        // Showing an Alert when a step completes
+    private func showCustomAlert(title: String = "Alert", message: String, handler: @escaping ((UIAlertAction)->Void)) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default,handler: handler)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: handler)
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
-
+    
 
 }
 
-
-extension ViewController:IDWiseSDKJourneyDelegate {
+extension ViewController: IDWiseSDKJourneyDelegate {
+    
     func onError(error: IDWiseSDKError) {
         self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in
             

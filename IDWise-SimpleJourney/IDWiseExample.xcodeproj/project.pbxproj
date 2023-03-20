@@ -105,8 +105,8 @@
 				E2AEDECF26D4355E00787443 /* Sources */,
 				E2AEDED026D4355E00787443 /* Frameworks */,
 				E2AEDED126D4355E00787443 /* Resources */,
-				32D94C1B4265AD0F5E7A56F0 /* [CP] Embed Pods Frameworks */,
-				7141B13A48F19FB3BF7AE5BC /* [CP] Copy Pods Resources */,
+				8C9847DDF9541D67E88F7BE7 /* [CP] Embed Pods Frameworks */,
+				D66E80653C67417422E799C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,23 +163,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32D94C1B4265AD0F5E7A56F0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3978DD42735E44B33E0E5CF1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +185,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7141B13A48F19FB3BF7AE5BC /* [CP] Copy Pods Resources */ = {
+		8C9847DDF9541D67E88F7BE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66E80653C67417422E799C6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,13 +379,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4CHC9V96LJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IDWiseExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idwise.IDWiseExampleOneee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idwise.IDWiseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -401,13 +401,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4CHC9V96LJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IDWiseExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idwise.IDWiseExampleOneee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idwise.IDWiseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

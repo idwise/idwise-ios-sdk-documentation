@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		054CFF8EE7F9FA00F231D9CB /* Pods_IDWiseNFC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD31D857F24AED63B6E2EB9A /* Pods_IDWiseNFC_Example.framework */; };
+		1DE2B1AA29B8AE0E00239339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2B1A929B8AE0E00239339 /* AppDelegate.swift */; };
+		1DE2B1AC29B8AE0E00239339 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2B1AB29B8AE0E00239339 /* SceneDelegate.swift */; };
+		1DE2B1AE29B8AE0E00239339 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2B1AD29B8AE0E00239339 /* ViewController.swift */; };
+		1DE2B1B129B8AE0E00239339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE2B1AF29B8AE0E00239339 /* Main.storyboard */; };
+		1DE2B1B329B8AE1000239339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE2B1B229B8AE1000239339 /* Assets.xcassets */; };
+		1DE2B1B629B8AE1000239339 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE2B1B429B8AE1000239339 /* LaunchScreen.storyboard */; };
+		1DE2B1BE29B8AF1300239339 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2B1BD29B8AF1300239339 /* LoadingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		181066E1F279FB96EF5A842B /* Pods-IDWiseNFC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDWiseNFC_Example.release.xcconfig"; path = "Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1DE2B1A629B8AE0E00239339 /* IDWiseNFC_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDWiseNFC_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE2B1A929B8AE0E00239339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DE2B1AB29B8AE0E00239339 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1DE2B1AD29B8AE0E00239339 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DE2B1B029B8AE0E00239339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DE2B1B229B8AE1000239339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DE2B1B529B8AE1000239339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DE2B1B729B8AE1000239339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE2B1BD29B8AF1300239339 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1DE2B1BF29B8AF5E00239339 /* IDWiseNFC_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IDWiseNFC_Example.entitlements; sourceTree = "<group>"; };
+		CD31D857F24AED63B6E2EB9A /* Pods_IDWiseNFC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDWiseNFC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDC2ABB6B5FBBD28D3B7E4C /* Pods-IDWiseNFC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDWiseNFC_Example.debug.xcconfig"; path = "Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DE2B1A329B8AE0E00239339 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054CFF8EE7F9FA00F231D9CB /* Pods_IDWiseNFC_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DE2B19D29B8AE0E00239339 = {
+			isa = PBXGroup;
+			children = (
+				1DE2B1A829B8AE0E00239339 /* IDWiseNFC_Example */,
+				1DE2B1A729B8AE0E00239339 /* Products */,
+				A2BF253EC1220CAD72648DA6 /* Pods */,
+				9C553D26993854344D9ADE2F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DE2B1A729B8AE0E00239339 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DE2B1A629B8AE0E00239339 /* IDWiseNFC_Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DE2B1A829B8AE0E00239339 /* IDWiseNFC_Example */ = {
+			isa = PBXGroup;
+			children = (
+				1DE2B1BF29B8AF5E00239339 /* IDWiseNFC_Example.entitlements */,
+				1DE2B1BD29B8AF1300239339 /* LoadingView.swift */,
+				1DE2B1A929B8AE0E00239339 /* AppDelegate.swift */,
+				1DE2B1AB29B8AE0E00239339 /* SceneDelegate.swift */,
+				1DE2B1AD29B8AE0E00239339 /* ViewController.swift */,
+				1DE2B1AF29B8AE0E00239339 /* Main.storyboard */,
+				1DE2B1B229B8AE1000239339 /* Assets.xcassets */,
+				1DE2B1B429B8AE1000239339 /* LaunchScreen.storyboard */,
+				1DE2B1B729B8AE1000239339 /* Info.plist */,
+			);
+			path = IDWiseNFC_Example;
+			sourceTree = "<group>";
+		};
+		9C553D26993854344D9ADE2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD31D857F24AED63B6E2EB9A /* Pods_IDWiseNFC_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2BF253EC1220CAD72648DA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC2ABB6B5FBBD28D3B7E4C /* Pods-IDWiseNFC_Example.debug.xcconfig */,
+				181066E1F279FB96EF5A842B /* Pods-IDWiseNFC_Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DE2B1A529B8AE0E00239339 /* IDWiseNFC_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DE2B1BA29B8AE1000239339 /* Build configuration list for PBXNativeTarget "IDWiseNFC_Example" */;
+			buildPhases = (
+				24010082ABCBDEE3BDCA877E /* [CP] Check Pods Manifest.lock */,
+				1DE2B1A229B8AE0E00239339 /* Sources */,
+				1DE2B1A329B8AE0E00239339 /* Frameworks */,
+				1DE2B1A429B8AE0E00239339 /* Resources */,
+				EAD7DA9D546E713CA9B52826 /* [CP] Embed Pods Frameworks */,
+				E29718695A9CCB5A55BB0E21 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IDWiseNFC_Example;
+			productName = IDWiseNFC_Example;
+			productReference = 1DE2B1A629B8AE0E00239339 /* IDWiseNFC_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DE2B19E29B8AE0E00239339 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					1DE2B1A529B8AE0E00239339 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 1DE2B1A129B8AE0E00239339 /* Build configuration list for PBXProject "IDWiseNFC_Example" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DE2B19D29B8AE0E00239339;
+			productRefGroup = 1DE2B1A729B8AE0E00239339 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DE2B1A529B8AE0E00239339 /* IDWiseNFC_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DE2B1A429B8AE0E00239339 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE2B1B629B8AE1000239339 /* LaunchScreen.storyboard in Resources */,
+				1DE2B1B329B8AE1000239339 /* Assets.xcassets in Resources */,
+				1DE2B1B129B8AE0E00239339 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24010082ABCBDEE3BDCA877E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDWiseNFC_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E29718695A9CCB5A55BB0E21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAD7DA9D546E713CA9B52826 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDWiseNFC_Example/Pods-IDWiseNFC_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DE2B1A229B8AE0E00239339 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE2B1AE29B8AE0E00239339 /* ViewController.swift in Sources */,
+				1DE2B1BE29B8AF1300239339 /* LoadingView.swift in Sources */,
+				1DE2B1AA29B8AE0E00239339 /* AppDelegate.swift in Sources */,
+				1DE2B1AC29B8AE0E00239339 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DE2B1AF29B8AE0E00239339 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DE2B1B029B8AE0E00239339 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DE2B1B429B8AE1000239339 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DE2B1B529B8AE1000239339 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DE2B1B829B8AE1000239339 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DE2B1B929B8AE1000239339 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DE2B1BB29B8AE1000239339 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEDC2ABB6B5FBBD28D3B7E4C /* Pods-IDWiseNFC_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IDWiseNFC_Example/IDWiseNFC_Example.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IDWiseNFC_Example/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "IDWise uses NFC to scan your documents";
+				INFOPLIST_KEY_NSCameraUsageDescription = "IDWise uses camera to scan your documents";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idwise.IDWiseNFC-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DE2B1BC29B8AE1000239339 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181066E1F279FB96EF5A842B /* Pods-IDWiseNFC_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IDWiseNFC_Example/IDWiseNFC_Example.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IDWiseNFC_Example/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "IDWise uses NFC to scan your documents";
+				INFOPLIST_KEY_NSCameraUsageDescription = "IDWise uses camera to scan your documents";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idwise.IDWiseNFC-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DE2B1A129B8AE0E00239339 /* Build configuration list for PBXProject "IDWiseNFC_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DE2B1B829B8AE1000239339 /* Debug */,
+				1DE2B1B929B8AE1000239339 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DE2B1BA29B8AE1000239339 /* Build configuration list for PBXNativeTarget "IDWiseNFC_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DE2B1BB29B8AE1000239339 /* Debug */,
+				1DE2B1BC29B8AE1000239339 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DE2B19E29B8AE0E00239339 /* Project object */;
+}
