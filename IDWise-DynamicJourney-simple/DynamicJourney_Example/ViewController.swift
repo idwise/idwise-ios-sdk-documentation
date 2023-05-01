@@ -16,40 +16,61 @@ class ViewController: UIViewController {
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
     
-
+    @IBOutlet weak var buttonsStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            LoadingView.show(message: "Loading... Please Wait")
+        buttonsStackView.arrangedSubviews.forEach { view in
+            if let button = view as? UIButton {
+                button.isEnabled = false
+            }
         }
-        addMenuWidgetView()
+        
+    }
+    
+    @IBAction func testJourneyButtonTapped(_ sender: Any) {
+        DispatchQueue.main.async {
+            LoadingView.show(message: "Loading...Please Wait")
+        }
         IDWise.initialize(clientKey: CLIENT_KEY, onError: { _ in })
         IDWise.startDynamicJourney(journeyDefinitionId: JOURNEY_DEFINITION_ID, journeyDelegate: self, stepDelegate: self)
         
     }
     
-    func addMenuWidgetView() {
-        // Uncomment this after releasing new IDWise version with MenuWidgetView
-//        let menuView = MenuWidgetView()
-//        self.view.addSubview(menuView)
-//        menuView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            menuView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
-//            menuView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
-//            menuView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
-//            menuView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
-//        ])
+    @IBAction func verifyIDDocumentTapped(_ sender: Any) {
+        // stepID should be from your step definition
+        IDWise.startStep(stepId: "0")
     }
+    
+    @IBAction func verifySelfieTapped(_ sender: Any) {
+        // stepID should be from your step definition
+        IDWise.startStep(stepId: "2")
+    }
+    
 
 }
 
 extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     func JourneyStarted(journeyID: String) {
-        
+        buttonsStackView.arrangedSubviews.forEach { view in
+            if let button = view as? UIButton {
+                button.isEnabled = true
+            }
+        }
+        DispatchQueue.main.async {
+            LoadingView.hide()
+        }
     }
     
     func onJourneyResumed(journeyID: String) {
-        
+        buttonsStackView.arrangedSubviews.forEach { view in
+            if let button = view as? UIButton {
+                button.isEnabled = true
+            }
+        }
+        DispatchQueue.main.async {
+            LoadingView.hide()
+        }
     }
     
     func JourneyFinished() {
@@ -61,7 +82,9 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     }
     
     func onError(error: IDWiseSDKError) {
-        
+        DispatchQueue.main.async {
+            LoadingView.hide()
+        }
     }
     
     func onStepCaptured(stepId: Int, capturedImage: UIImage?) {
