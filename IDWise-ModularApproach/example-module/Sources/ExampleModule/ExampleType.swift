@@ -18,7 +18,7 @@ class ExampleType {
     
     
     func initialiseIDWiseSDKAndStartJourney() {
-        IDWise.initialize(clientKey: CLIENT_KEY) { err in
+        IDWise.initialize(clientKey: CLIENT_KEY,theme: IDWiseSDKTheme.systemDefault) { err in
             // Deal with error here
             if let error = err {
             }

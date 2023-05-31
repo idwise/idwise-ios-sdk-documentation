@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             LoadingView.show(message: "Loading... Please Wait")
         }
         addMenuWidgetView()
-        IDWise.initialize(clientKey: CLIENT_KEY, onError: { _ in })
+        IDWise.initialize(clientKey: CLIENT_KEY,theme: IDWiseSDKTheme.systemDefault, onError: { _ in })
         IDWise.startDynamicJourney(journeyDefinitionId: JOURNEY_DEFINITION_ID, journeyDelegate: self, stepDelegate: self)
     }
     

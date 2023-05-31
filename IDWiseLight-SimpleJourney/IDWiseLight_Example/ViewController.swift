@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     @IBAction
     func startSDK(_ sender: UIButton) {
-        IDWise.initialize(clientKey: CLIENT_KEY) { err in
+        IDWise.initialize(clientKey: CLIENT_KEY,theme: IDWiseSDKTheme.systemDefault) { err in
             // Deal with error here
             if let error = err {
                 self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in

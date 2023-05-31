@@ -9,7 +9,7 @@ target 'IDWiseNFC_Example' do
   use_frameworks!
 
   # Pods for IDWiseNFC_Example
-  pod 'IDWiseNFC'
+  pod 'IDWiseNFC','4.1.6'
 
   post_install do |installer|
     installer.pods_project.build_configurations.each do |config|

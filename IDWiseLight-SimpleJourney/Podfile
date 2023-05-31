@@ -9,7 +9,7 @@ target 'IDWiseLight_Example' do
   use_frameworks!
 
   # Pods for IDWiseLight_Example
-  pod 'IDWiseLight'
+  pod 'IDWiseLight','4.1.6'
   
   post_install do |installer|
       installer.pods_project.build_configurations.each do |config|
