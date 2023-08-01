@@ -106,7 +106,6 @@
 				E2AEDED026D4355E00787443 /* Frameworks */,
 				E2AEDED126D4355E00787443 /* Resources */,
 				8C9847DDF9541D67E88F7BE7 /* [CP] Embed Pods Frameworks */,
-				D66E80653C67417422E799C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,23 +199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D66E80653C67417422E799C6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDWiseExample/Pods-IDWiseExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

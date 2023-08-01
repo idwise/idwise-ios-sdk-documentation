@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import IDWise
+import IDWiseSDK
 
 class ViewController: UIViewController {
     

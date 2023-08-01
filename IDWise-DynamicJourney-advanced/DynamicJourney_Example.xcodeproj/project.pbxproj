@@ -103,7 +103,6 @@
 				1DE2B18329B8AAAE00239339 /* Frameworks */,
 				1DE2B18429B8AAAE00239339 /* Resources */,
 				ACA8E007CEFF220936818482 /* [CP] Embed Pods Frameworks */,
-				717982D24420B60039AB1575 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,23 +160,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		717982D24420B60039AB1575 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DynamicJourney_Example/Pods-DynamicJourney_Example-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DynamicJourney_Example/Pods-DynamicJourney_Example-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamicJourney_Example/Pods-DynamicJourney_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7C807D24F90154165712980B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

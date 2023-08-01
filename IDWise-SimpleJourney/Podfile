@@ -7,7 +7,7 @@ target 'IDWiseExample' do
   use_frameworks!
 
   # Pods for IDWiseExample
-  pod 'IDWise', '4.1.6'
+  pod 'IDWise'
   
   post_install do |installer|
      installer.pods_project.build_configurations.each do |config|
