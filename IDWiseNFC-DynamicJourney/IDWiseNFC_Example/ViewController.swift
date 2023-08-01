@@ -11,10 +11,10 @@ import IDWiseNFC
 class ViewController: UIViewController {
     
     // TODO: Replace the placeholder with your 'Client Key' provided by IDWise
-    let CLIENT_KEY = "<CLIENT_KEY>"
+    let CLIENT_KEY = "QmFzaWMgWkRJME1qVm1ZelV0WlRZeU1TMDBZV0kxTFdGak5EVXRObVZqT1RGaU9XSXpZakl6T21oUFlubE9VRXRpVVRkMWVubHBjbGhUYld4aU1GcDNOMWcyTkVwWWNrTXlOa1Z4U21oWlNsaz0="
     
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
-    let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
+    let JOURNEY_DEFINITION_ID = "d2425fc5-e621-4ab5-ac45-6ec91b9b3b23"
 
     
     override func viewDidLoad() {
@@ -23,11 +23,18 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             LoadingView.show(message: "Loading... Please Wait")
         }
-        addMenuWidgetView()
+      //  addMenuWidgetView()
         IDWise.initialize(clientKey: CLIENT_KEY,theme: IDWiseSDKTheme.systemDefault, onError: { _ in })
         IDWise.startDynamicJourney(journeyDefinitionId: JOURNEY_DEFINITION_ID, journeyDelegate: self, stepDelegate: self)
     }
     
+    @IBAction func documentTapped(_ sender: Any) {
+        IDWise.startStep(stepId: "0")
+    }
+    
+    @IBAction func selfieTapped(_ sender: Any) {
+        IDWise.startStep(stepId: "2")
+    }
     func addMenuWidgetView() {
         let menuView = MenuWidgetView()
         self.view.addSubview(menuView)
