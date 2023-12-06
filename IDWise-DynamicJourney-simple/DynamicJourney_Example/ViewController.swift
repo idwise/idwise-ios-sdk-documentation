@@ -51,6 +51,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
+    func onStepCancelled(stepInfo: StepInfo) {
+        
+    }
+    
     func JourneyStarted(journeyID: String) {
         buttonsStackView.arrangedSubviews.forEach { view in
             if let button = view as? UIButton {

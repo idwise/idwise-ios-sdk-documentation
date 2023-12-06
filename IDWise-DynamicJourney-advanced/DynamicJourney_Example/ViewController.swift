@@ -48,6 +48,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
+    func onStepCancelled(stepInfo: IDWiseSDK.StepInfo) {
+        
+    }
+    
     func JourneyStarted(journeyID: String) {
         
     }
