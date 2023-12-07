@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
-    func onStepCancelled(stepInfo: StepInfo) {
+    func onStepCancelled(stepId: String) {
         
     }
     
