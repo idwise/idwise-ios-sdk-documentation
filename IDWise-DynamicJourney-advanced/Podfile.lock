@@ -1,5 +1,5 @@
 PODS:
-  - IDWise (4.6.0)
+  - IDWise (4.6.1)
 
 DEPENDENCIES:
   - IDWise
@@ -9,7 +9,7 @@ SPEC REPOS:
     - IDWise
 
 SPEC CHECKSUMS:
-  IDWise: 4ebfabac12f7c378d693b2a8e1d26a40f0b7612a
+  IDWise: 43f731c9edc10a1b6e654c21c0f1e93d7ff539e8
 
 PODFILE CHECKSUM: b1cb4288aeb644a1c72400232e6a1b88864cf035
 

@@ -52,9 +52,6 @@ class ViewController: UIViewController {
 
 
 extension ViewController: IDWiseSDKJourneyDelegate {
-    func onStepSkipped(stepId: String) {
-        
-    }
     
     func onError(error: IDWiseSDKError) {
         self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in
