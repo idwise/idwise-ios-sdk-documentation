@@ -52,15 +52,16 @@ class ViewController: UIViewController {
 
 extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     func onStepSkipped(stepId: String) {
-        
+        print("onStepSkipped")
     }
     
 
     func onStepCancelled(stepId: String) {
-        
+        print("onStepCancelled")
     }
     
     func JourneyStarted(journeyID: String) {
+        print("JourneyStarted")
         buttonsStackView.arrangedSubviews.forEach { view in
             if let button = view as? UIButton {
                 button.isEnabled = true
@@ -72,6 +73,7 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     }
     
     func onJourneyResumed(journeyID: String) {
+        print("onJourneyResumed")
         buttonsStackView.arrangedSubviews.forEach { view in
             if let button = view as? UIButton {
                 button.isEnabled = true
@@ -83,29 +85,30 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     }
     
     func JourneyFinished() {
-        
+        print("JourneyFinished")
     }
     
     func JourneyCancelled() {
-        
+        print("JourneyCancelled")
     }
     
     func onError(error: IDWiseSDKError) {
+        print("onError")
         DispatchQueue.main.async {
             LoadingView.hide()
         }
     }
     
     func onStepCaptured(stepId: Int, capturedImage: UIImage?) {
-        
+        print("onStepCaptured")
     }
     
     func onStepResult(stepId: Int, stepResult: StepResult?) {
-        
+        print("onStepResult")
     }
     
     func onStepConfirmed(stepId: String) {
-
+        print("onStepConfirmed")
     }
     
 }
