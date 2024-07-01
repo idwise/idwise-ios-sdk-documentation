@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
 
+    var journeyID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,9 @@ extension ViewController: IDWiseSDKStepDelegate, IDWiseSDKJourneyDelegate {
     }
     
     func JourneyStarted(journeyID: String) {
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyID = journeyID
+
         DispatchQueue.main.async {
             LoadingView.hide()
             // you can also start step when journey is started and this method is Invoked
@@ -72,6 +76,9 @@ extension ViewController: IDWiseSDKStepDelegate, IDWiseSDKJourneyDelegate {
     }
     
     func onJourneyResumed(journeyID: String) {
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyID = journeyID
+
         DispatchQueue.main.async {
             LoadingView.hide()
             // you can also start step when journey is resumed and this method is Invoked

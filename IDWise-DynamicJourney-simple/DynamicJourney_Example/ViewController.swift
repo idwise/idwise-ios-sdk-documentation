@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
     
+    var journeyID = ""
+    
     @IBOutlet weak var buttonsStackView: UIStackView!
     
     override func viewDidLoad() {
@@ -61,6 +63,9 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     }
     
     func JourneyStarted(journeyID: String) {
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyID = journeyID
+
         buttonsStackView.arrangedSubviews.forEach { view in
             if let button = view as? UIButton {
                 button.isEnabled = true
@@ -74,6 +79,9 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     }
     
     func onJourneyResumed(journeyID: String) {
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyID = journeyID
+
         buttonsStackView.arrangedSubviews.forEach { view in
             if let button = view as? UIButton {
                 button.isEnabled = true

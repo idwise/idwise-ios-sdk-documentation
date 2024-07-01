@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
     
-
+    var journeyID = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addMenuWidgetView()
@@ -56,11 +57,15 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
     }
     
     func JourneyStarted(journeyID: String) {
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyID = journeyID
         
     }
     
     func onJourneyResumed(journeyID: String) {
-        
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyID = journeyID
+
     }
     
     func JourneyFinished() {
