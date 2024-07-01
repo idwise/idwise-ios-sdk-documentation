@@ -39,12 +39,12 @@ class ViewController: UIViewController {
     
     @IBAction func verifyIDDocumentTapped(_ sender: Any) {
         // stepID should be from your step definition
-        IDWise.startStep(stepId: "0")
+        IDWise.startStep(stepId: "STEP_ID")
     }
     
     @IBAction func verifySelfieTapped(_ sender: Any) {
         // stepID should be from your step definition
-        IDWise.startStep(stepId: "2")
+        IDWise.startStep(stepId: "STEP_ID")
     }
     
 
@@ -68,6 +68,8 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
         }
         DispatchQueue.main.async {
             LoadingView.hide()
+            // you can also start step when journey is started and this method is Invoked
+            IDWise.startStep(stepId: "STEP_ID")  // STEP_ID should be from your step definition
         }
     }
     
@@ -79,6 +81,9 @@ extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
         }
         DispatchQueue.main.async {
             LoadingView.hide()
+            // you can also start step when journey is resumed and this method is Invoked
+            IDWise.startStep(stepId: "STEP_ID")  // STEP_ID should be from your step definition
+
         }
     }
     

@@ -11,10 +11,10 @@ import IDWiseNFC
 class ViewController: UIViewController {
     
     // TODO: Replace the placeholder with your 'Client Key' provided by IDWise
-    let CLIENT_KEY = "QmFzaWMgWkRJME1qVm1ZelV0WlRZeU1TMDBZV0kxTFdGak5EVXRObVZqT1RGaU9XSXpZakl6T21oUFlubE9VRXRpVVRkMWVubHBjbGhUYld4aU1GcDNOMWcyTkVwWWNrTXlOa1Z4U21oWlNsaz0="
+    let CLIENT_KEY = "<YOUR_CLIENT_KEY>"
     
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
-    let JOURNEY_DEFINITION_ID = "d2425fc5-e621-4ab5-ac45-6ec91b9b3b23"
+    let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
 
     
     override func viewDidLoad() {
@@ -29,11 +29,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func documentTapped(_ sender: Any) {
-        IDWise.startStep(stepId: "0")
+        IDWise.startStep(stepId: "STEP_ID") // STEP_ID should be from your step definition
     }
     
     @IBAction func selfieTapped(_ sender: Any) {
-        IDWise.startStep(stepId: "2")
+        IDWise.startStep(stepId: "STEP_ID") // STEP_ID should be from your step definition
     }
     func addMenuWidgetView() {
         let menuView = MenuWidgetView()
@@ -65,12 +65,18 @@ extension ViewController: IDWiseSDKStepDelegate, IDWiseSDKJourneyDelegate {
     func JourneyStarted(journeyID: String) {
         DispatchQueue.main.async {
             LoadingView.hide()
+            // you can also start step when journey is started and this method is Invoked
+            IDWise.startStep(stepId: "STEP_ID")  // STEP_ID should be from your step definition
+
         }
     }
     
     func onJourneyResumed(journeyID: String) {
         DispatchQueue.main.async {
             LoadingView.hide()
+            // you can also start step when journey is resumed and this method is Invoked
+            IDWise.startStep(stepId: "STEP_ID")  // STEP_ID should be from your step definition
+
         }
     }
     

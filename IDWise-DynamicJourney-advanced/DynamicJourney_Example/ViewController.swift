@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     }
     
     func addMenuWidgetView() {
-        // Uncomment this after releasing new IDWise version with MenuWidgetView
         let menuView = MenuWidgetView()
         self.view.addSubview(menuView)
         menuView.translatesAutoresizingMaskIntoConstraints = false
