@@ -24,8 +24,8 @@
 		1DE2B19029B8AAAE00239339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DE2B19229B8AAB000239339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DE2B19529B8AAB000239339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1DE2B19729B8AAB000239339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25D21CF256C13C0DB37DD1F9 /* Pods_DynamicJourney_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicJourney_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7684729F2C6E57FD000DEC92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82CFE33A18313877C1B00062 /* Pods-DynamicJourney_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicJourney_Example.release.xcconfig"; path = "Target Support Files/Pods-DynamicJourney_Example/Pods-DynamicJourney_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CBEE80F509BA6A4D502033B2 /* Pods-DynamicJourney_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicJourney_Example.debug.xcconfig"; path = "Target Support Files/Pods-DynamicJourney_Example/Pods-DynamicJourney_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,13 +63,13 @@
 		1DE2B18829B8AAAE00239339 /* DynamicJourney_Example */ = {
 			isa = PBXGroup;
 			children = (
+				7684729F2C6E57FD000DEC92 /* Info.plist */,
 				1DE2B18929B8AAAE00239339 /* AppDelegate.swift */,
 				1DE2B18B29B8AAAE00239339 /* SceneDelegate.swift */,
 				1DE2B18D29B8AAAE00239339 /* ViewController.swift */,
 				1DE2B18F29B8AAAE00239339 /* Main.storyboard */,
 				1DE2B19229B8AAB000239339 /* Assets.xcassets */,
 				1DE2B19429B8AAB000239339 /* LaunchScreen.storyboard */,
-				1DE2B19729B8AAB000239339 /* Info.plist */,
 			);
 			path = DynamicJourney_Example;
 			sourceTree = "<group>";

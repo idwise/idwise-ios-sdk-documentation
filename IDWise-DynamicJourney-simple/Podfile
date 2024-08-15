@@ -9,7 +9,7 @@ target 'DynamicJourney_Example' do
   use_frameworks!
 
   # Pods for DynamicJourney_Example
-  pod 'IDWise'
+  pod 'IDWise', '5.0.1'
 
   post_install do |installer|
     installer.pods_project.build_configurations.each do |config|

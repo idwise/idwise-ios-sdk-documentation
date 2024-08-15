@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
     
-    var journeyID = ""
+    var journeyId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,56 +40,79 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             LoadingView.show(message: "Loading... Please Wait")
         }
-        IDWise.initialize(clientKey: CLIENT_KEY,theme: IDWiseSDKTheme.systemDefault, onError: { _ in })
-        IDWise.startDynamicJourney(journeyDefinitionId: JOURNEY_DEFINITION_ID, journeyDelegate: self, stepDelegate: self)
+        IDWiseDynamic.initialize(clientKey: CLIENT_KEY,theme: IDWiseTheme.systemDefault, onError: { _ in })
+        
+        let applicantDetails: [String:String] = [
+            ApplicantDetailsKeys.FULL_NAME: "John Doe",
+            ApplicantDetailsKeys.BIRTH_DATE: "2000-02-01",
+            ApplicantDetailsKeys.SEX: "male"
+        ]
+        
+        // If you want you can pass applicantDetails otherwise you can pass It as nil
+        
+        // Make sure to provide ApplicantDetailsKeys.FULL_NAME as a mandatory field otherwise an error will be thrown
+        
+        IDWiseDynamic.startJourney(flowId: JOURNEY_DEFINITION_ID, applicantDetails: applicantDetails, journeyCallbacks: self, stepCallbacks: self)
+        
+        // If you don't want to pass applicant details then method will look like this
+        
+       /*  IDWiseDynamic.startJourney(flowId: JOURNEY_DEFINITION_ID, applicantDetails: nil, journeyCallbacks: self, stepCallbacks: self) */
     }
     
 
 }
 
-extension ViewController: IDWiseSDKJourneyDelegate, IDWiseSDKStepDelegate {
-    func onStepSkipped(stepId: String) {
-        
-    }
-    
-    func onStepCancelled(stepId: String) {
-        
-    }
-    
-    func JourneyStarted(journeyID: String) {
+extension ViewController: IDWiseJourneyCallbacks {
+    func onJourneyStarted(journeyStartedInfo: IDWiseSDK.JourneyStartedInfo) {
         // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
-        self.journeyID = journeyID
-        
+        self.journeyId = journeyStartedInfo.journeyId
+        DispatchQueue.main.async {
+            LoadingView.hide()
+            // you can also start step when journey is started and this method is Invoked
+            IDWiseDynamic.startStep(stepId: "STEP_ID")  // STEP_ID should be from your step definition
+        }
     }
     
-    func onJourneyResumed(journeyID: String) {
+    func onJourneyResumed(journeyResumedInfo: IDWiseSDK.JourneyResumedInfo) {
         // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
-        self.journeyID = journeyID
+        self.journeyId = journeyResumedInfo.journeyId
+        DispatchQueue.main.async {
+            LoadingView.hide()
+            // you can also start step when journey is resumed and this method is Invoked
+            IDWiseDynamic.startStep(stepId: "STEP_ID")  // STEP_ID should be from your step definition
+        }
+    }
+    
+    func onJourneyCompleted(journeyCompletedInfo: IDWiseSDK.JourneyCompletedInfo) {
+        // Here you can take any action after Journey is completed
+    }
+    
+    func onJourneyCancelled(journeyCancelledInfo: IDWiseSDK.JourneyCancelledInfo) {
+        // Here you can take any action after Journey is cancelled
 
     }
     
-    func JourneyFinished() {
-        
+    func onError(error: IDWiseError) {
+        // If some error occurs, this method will Invoke
+       
+    }
+}
+extension ViewController: IDWiseStepCallbacks {
+    
+    func onStepCaptured(stepCapturedInfo: IDWiseSDK.StepCapturedInfo) {
+        print("Step captured Information of step with stepId \(stepCapturedInfo.stepId)")
     }
     
-    func JourneyCancelled() {
-        
+    func onStepResult(stepResultInfo: IDWiseSDK.StepResultInfo) {
+        print("Step result Information of step with stepId \(stepResultInfo.stepId)")
     }
     
-    func onError(error: IDWiseSDKError) {
-        
+    func onStepCancelled(stepCancelledInfo: IDWiseSDK.StepCancelledInfo) {
+        print("Step with \(stepCancelledInfo.stepId) cancelled")
     }
     
-    func onStepCaptured(stepId: Int, capturedImage: UIImage?) {
-        
+    func onStepSkipped(stepSkippedInfo: IDWiseSDK.StepSkippedInfo) {
+        print("Step with \(stepSkippedInfo.stepId) skipped")
     }
-    
-    func onStepResult(stepId: Int, stepResult: StepResult?) {
-        
-    }
-    
-    func onStepConfirmed(stepId: String) {
-
-    }
-    
+   
 }
