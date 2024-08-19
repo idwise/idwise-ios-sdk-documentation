@@ -1,16 +1,16 @@
 PODS:
-  - IDWise (4.6.2)
+  - IDWise (5.0.1)
 
 DEPENDENCIES:
-  - IDWise
+  - IDWise (= 5.0.1)
 
 SPEC REPOS:
   https://github.com/idwise/ios-sdk:
     - IDWise
 
 SPEC CHECKSUMS:
-  IDWise: 5f9dd02a317b24e584c02efbb3bafd20a96ee5af
+  IDWise: 1ace375173e9d12efbe9d011732948cec6dda434
 
-PODFILE CHECKSUM: b1cb4288aeb644a1c72400232e6a1b88864cf035
+PODFILE CHECKSUM: a191e3bdeb8c4cedb2f35c46338ce3fd451d1439
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

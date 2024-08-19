@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     // TODO: Replace the placeholder with your 'Journey Definition ID' provided by IDWise
     let JOURNEY_DEFINITION_ID = "<JOURNEY_DEFINITION_ID>"
     
-    var journeyID = ""
+    var journeyId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     @IBAction
     func startSDK(_ sender: UIButton) {
-        IDWise.initialize(clientKey: CLIENT_KEY,theme: IDWiseSDKTheme.systemDefault) { err in
+        IDWise.initialize(clientKey: CLIENT_KEY,theme: IDWiseTheme.systemDefault) { err in
             // Deal with error here
             if let error = err {
                 self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in
@@ -35,7 +35,21 @@ class ViewController: UIViewController {
             }
         }
         
-        IDWise.startJourney(journeyDefinitionId: JOURNEY_DEFINITION_ID,  locale: "en", journeyDelegate: self)
+        let applicantDetails: [String:String] = [
+            ApplicantDetailsKeys.FULL_NAME: "John Doe",
+            ApplicantDetailsKeys.BIRTH_DATE: "2000-02-01",
+            ApplicantDetailsKeys.SEX: "male"
+        ]
+        
+        // If you want you can pass applicantDetails otherwise you can pass It as nil
+        
+        // Make sure to provide ApplicantDetailsKeys.FULL_NAME as a mandatory field otherwise an error will be thrown
+        
+        IDWise.startJourney(flowId: JOURNEY_DEFINITION_ID,  locale: "en", applicantDetails: applicantDetails, journeyCallbacks: self)
+        
+        // If you don't want to pass applicant details then method will look like this
+        
+       /* IDWise.startJourney(flowId: JOURNEY_DEFINITION_ID,  locale: "en", applicantDetails: nil, journeyCallbacks: self) */
 
     }
    
@@ -52,31 +66,31 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: IDWiseSDKJourneyDelegate {
+extension ViewController: IDWiseJourneyCallbacks {
+    func onJourneyStarted(journeyStartedInfo: IDWiseSDK.JourneyStartedInfo) {
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyId = journeyStartedInfo.journeyId
+    }
     
-    func onError(error: IDWiseSDKError) {
+    func onJourneyResumed(journeyResumedInfo: IDWiseSDK.JourneyResumedInfo) {
+        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
+        self.journeyId = journeyResumedInfo.journeyId
+    }
+    
+    func onJourneyCompleted(journeyCompletedInfo: IDWiseSDK.JourneyCompletedInfo) {
+        // Here you can take any action after Journey is completed
+    }
+    
+    func onJourneyCancelled(journeyCancelledInfo: IDWiseSDK.JourneyCancelledInfo) {
+        // Here you can take any action after Journey is cancelled
+
+    }
+    
+    func onError(error: IDWiseError) {
+        // showing error in an alert
         self.showCustomAlert(title: "Error \(error.code)", message: error.message, handler: { _ in
             
         })
-    }
-    func onJourneyResumed(journeyID: String) {
-        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
-        self.journeyID = journeyID
-
-    }
-    
-    func JourneyCancelled() {
-        
-    }
-    
-    func JourneyStarted(journeyID: String) {
-        // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
-        self.journeyID = journeyID
-
-    }
-    
-    func JourneyFinished() {
-        
     }
 
 }
