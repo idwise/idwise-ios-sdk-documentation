@@ -86,6 +86,9 @@ extension ViewController: IDWiseJourneyCallbacks {
     
     func onError(error: IDWiseError) {
         // If some error occurs, this method will Invoke
+        DispatchQueue.main.async {
+            LoadingView.hide()
+        }
        
     }
 }
