@@ -105,7 +105,13 @@ extension ViewController: IDWiseJourneyCallbacks {
 extension ViewController: IDWiseStepCallbacks {
     
     func onStepCaptured(stepCapturedInfo: IDWiseSDK.StepCapturedInfo) {
-        print("Step captured Information of step with stepId \(stepCapturedInfo.stepId)")
+        print("Step captured Information of step with stepId :: \(stepCapturedInfo.stepId)")
+        
+        print("Front Step Original Image :: \(stepCapturedInfo.originalImage)")
+        print("Back Step Original Image :: \(stepCapturedInfo.originalImageBack)")
+
+        print("Front Step Cropped Image :: \(stepCapturedInfo.croppedImage)")
+        print("Back Step Cropped Image :: \(stepCapturedInfo.croppedImageBack)")
     }
     
     func onStepResult(stepResultInfo: IDWiseSDK.StepResultInfo) {
