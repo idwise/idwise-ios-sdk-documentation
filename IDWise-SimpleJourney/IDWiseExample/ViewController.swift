@@ -42,9 +42,7 @@ class ViewController: UIViewController {
         ]
         
         // If you want you can pass applicantDetails otherwise you can pass It as nil
-        
-        // Make sure to provide ApplicantDetailsKeys.FULL_NAME as a mandatory field otherwise an error will be thrown
-        
+                
         IDWise.startJourney(flowId: JOURNEY_DEFINITION_ID,  locale: "en", applicantDetails: applicantDetails, journeyCallbacks: self)
         
         // If you don't want to pass applicant details then method will look like this
