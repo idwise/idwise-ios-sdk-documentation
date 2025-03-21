@@ -57,10 +57,26 @@ class ViewController: UIViewController {
        /*  IDWiseDynamic.startJourney(flowId: JOURNEY_DEFINITION_ID, applicantDetails: nil, journeyCallbacks: self, stepCallbacks: self) */
     }
     
+    // MARK: - UI Handling Methods
+    private func showCustomAlert(title: String = "Alert", message: String, handler: @escaping ((UIAlertAction)->Void)) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: handler)
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
+    }
 
 }
 
 extension ViewController: IDWiseJourneyCallbacks {
+    func onJourneyBlocked(journeyBlockedInfo: IDWiseSDK.JourneyBlockedInfo) {
+            // IDWise SDK already informed the user of the block reason
+            // Optionally you can add extra logic here to do extra handling if you need
+            // You can present a screen or an alert sheet to convey to user
+            self.showCustomAlert(message: journeyBlockedInfo.blockedTransaction?.blockReasonMessage ?? "", handler: { _ in
+                
+            })
+    }
+    
     func onJourneyStarted(journeyStartedInfo: IDWiseSDK.JourneyStartedInfo) {
         // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
         self.journeyId = journeyStartedInfo.journeyId

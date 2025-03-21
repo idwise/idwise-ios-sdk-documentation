@@ -65,6 +65,12 @@ class ViewController: UIViewController {
 
 
 extension ViewController: IDWiseJourneyCallbacks {
+    func onJourneyBlocked(journeyBlockedInfo: IDWiseSDK.JourneyBlockedInfo) {
+        // IDWise SDK already informed the user of the block reason
+        // User might be using VPN or a rooted device.
+        // Optionally you can add extra logic here to do extra handling if you need
+    }
+    
     func onJourneyStarted(journeyStartedInfo: IDWiseSDK.JourneyStartedInfo) {
         // Here you can save this journeyId to local storage or backend as you might need It again to resume journey
         self.journeyId = journeyStartedInfo.journeyId

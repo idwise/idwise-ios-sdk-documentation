@@ -1,10 +1,10 @@
 PODS:
   - FingerprintPro (2.7.0)
-  - IDWise (5.1.6):
+  - IDWise (5.4.0):
     - FingerprintPro (~> 2.7.0)
 
 DEPENDENCIES:
-  - IDWise (= 5.1.6)
+  - IDWise (= 5.4.0)
 
 SPEC REPOS:
   https://github.com/idwise/ios-sdk:
@@ -14,8 +14,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FingerprintPro: 0c7dbd28fc83751ca64b06328e2fb22bbc7ed118
-  IDWise: f3ed0a5d4600e7ba427a85ecd49b3991395090e7
+  IDWise: 26f9473fde1344e4e8387a0012a5173d174d57ee
 
-PODFILE CHECKSUM: 4ac9ce481dac4e581f353ff2ee298dee6f584a73
+PODFILE CHECKSUM: 8ad4b25155f7eb45438df0385523c8fdfc6c5f5f
 
 COCOAPODS: 1.15.2

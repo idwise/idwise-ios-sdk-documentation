@@ -2,14 +2,13 @@
 # platform :ios, '9.0'
 source 'https://cdn.cocoapods.org/'
 source 'https://github.com/idwise/ios-sdk'
-source 'https://github.com/idwise/ios-sdk-nfc'
 
 target 'IDWiseExample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for IDWiseExample
-  pod 'IDWiseNFC', '5.1.6'
+  pod 'IDWise', '5.4.0'
   
   post_install do |installer|
      installer.pods_project.build_configurations.each do |config|
